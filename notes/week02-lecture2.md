@@ -337,7 +337,7 @@ $$r_A = \sum_{t=1}^{n}\frac{r_t}{n} = \frac{r_1 + r_2 + \dots + r_n}{n} = \frac{
 - **How they connect:** past returns give sample statistics R(r) and s². In the present we analyse these to **estimate** the distribution's parameters μ and σ² for future returns. Realized returns are usually used to **extrapolate** expected returns and risk.
 
 > **▶ Beyond the slides: expected return from scenarios**
-> $$E[r] = \sum_s p(s)\, r(s), \qquad \sigma^2 = \sum_s p(s)\,[r(s) - E[r]]^2$$
+> $$E[r] = \sum_s p(s)  r(s), \qquad \sigma^2 = \sum_s p(s) [r(s) - E[r]]^2$$
 > Example: a boom (p = 0.3) gives +30%, a normal year (p = 0.5) gives +10%, and a recession (p = 0.2) gives −20%.
 > E[r] = 0.09 + 0.05 − 0.04 = **10%**
 > σ² = 0.3(0.20)² + 0.5(0)² + 0.2(−0.30)² = 0.012 + 0.018 = 0.030, so **σ = 17.3%**.

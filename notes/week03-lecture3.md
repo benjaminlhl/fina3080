@@ -74,7 +74,7 @@ The chart of the federal funds target rate shows several phases:
 - Standard deviation measures dispersion on *both* sides of the mean. VaR focuses only on the **downside tail**, which is the risk investors actually worry about.
 
 ### VaR under a normal distribution (slide 10)
-$$\text{VaR}_{5\%} = \mu - 1.65\,\sigma$$
+$$\text{VaR}_{5\%} = \mu - 1.65 \sigma$$
 **Example:** μ = 1%, σ = 2%, so VaR = 1% − 1.65 × 2% = **−2.3%**. In 5% of periods, you lose 2.3% or more.
 
 The normal-curve picture shows these coverage ranges:
@@ -87,7 +87,7 @@ The normal-curve picture shows these coverage ranges:
 
 ### VaR from realized returns (slide 11)
 If realized returns are roughly normal, r ≈ N(R(r), s²). Replace the population parameters with sample statistics:
-$$\text{VaR} \approx r_A - 1.65\,s$$
+$$\text{VaR} \approx r_A - 1.65 s$$
 Here r_A is the arithmetic mean of past returns and s is their sample standard deviation.
 
 ### Non-normal returns: fat tails (slide 12)
@@ -148,7 +148,7 @@ $$\text{Risk premium} \equiv E[r] - r_f = 22\% - 5\% = \mathbf{17\%}$$
 - The utility score combines three things into a **single preference score** for a security or portfolio: **risk aversion**, **expected return** and **risk**.
 - It helps **predict** how an investor will invest, and helps **advise** investors on what they should do.
 
-$$\boxed{U = E[r] - \tfrac{1}{2}\,A\,\sigma^2 = CE}$$
+$$\boxed{U = E[r] - \tfrac{1}{2} A \sigma^2 = CE}$$
 **A** measures the investor's **risk aversion**.
 
 | Value of A | Investor type |
@@ -256,8 +256,8 @@ Complete Portfolio
 **Notation:** y is the fraction of wealth in the risky portfolio P, and (1 − y) is the fraction in the risk-free asset F.
 
 ### Expected return (slide 31)
-$$E(r_C) = y\,E(r_P) + (1-y)\,r_f$$
-$$\Rightarrow\; E(r_C) = r_f + y\,[E(r_P) - r_f]$$
+$$E(r_C) = y E(r_P) + (1-y) r_f$$
+$$\Rightarrow\; E(r_C) = r_f + y [E(r_P) - r_f]$$
 The second form has three parts:
 - **r_f** is the risk-free return: the reward for **inflation and deferred consumption, without risk**.
 - **y** is the risk weight: the **quantity** of risk you take.
@@ -266,7 +266,7 @@ The second form has three parts:
 ### Risk (slide 32)
 $$\sigma_C^2 = y^2\sigma_P^2 + (1-y)^2\sigma_f^2 + 2y(1-y)\sigma_{Pf}$$
 **By definition σ_f = 0 and σ_Pf = 0**, because the risk-free rate doesn't vary. So:
-$$\sigma_C^2 = y^2\sigma_P^2 \;\Rightarrow\; \boxed{\sigma_C = y\,\sigma_P}$$
+$$\sigma_C^2 = y^2\sigma_P^2 \;\Rightarrow\; \boxed{\sigma_C = y \sigma_P}$$
 
 **Example:** E(r_P) = 15%, σ_P = 22% and r_f = 7%.
 1. E(r_C) = 7% + y × 8%
@@ -274,7 +274,7 @@ $$\sigma_C^2 = y^2\sigma_P^2 \;\Rightarrow\; \boxed{\sigma_C = y\,\sigma_P}$$
 
 ### The Capital Allocation Line (CAL) (slide 33)
 Combine the two equations by substituting y = σ_C / σ_P:
-$$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S}\,\sigma_C$$
+$$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S} \sigma_C$$
 - The CAL is a **straight line** from F at (0, r_f) through P at (σ_P, E(r_P)).
 - **Its slope is the Sharpe ratio**, also called the **reward-to-variability ratio**:
 $$S = \frac{E(r_P) - r_f}{\sigma_P} = \frac{8\%}{22\%} \approx 0.36$$
@@ -301,7 +301,7 @@ $$S = \frac{E(r_P) - r_f}{\sigma_P} = \frac{8\%}{22\%} \approx 0.36$$
 > **The kinked CAL:** in practice, individuals borrow at a rate **higher** than r_f (say 9%). The levered part then has a smaller slope, (15 − 9)/22 = 0.27, so the CAL bends at P.
 >
 > **Preview: choosing the best y.** Maximize U = r_f + y[E(r_P) − r_f] − ½A y²σ_P². This gives
-> $$y^* = \frac{E(r_P) - r_f}{A\,\sigma_P^2}$$
+> $$y^* = \frac{E(r_P) - r_f}{A \sigma_P^2}$$
 > For A = 4: y* = 0.08 / (4 × 0.0484) = **0.41**, so put 41% in P and 59% in T-bills. A less risk-averse investor with A = 1.5 gets y* = 1.10 and borrows. Graphically, y* is where an indifference curve is **tangent** to the CAL.
 
 ---

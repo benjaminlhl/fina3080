@@ -84,7 +84,7 @@ $$E(r_C) = yE(r_P) + (1-y)r_f = r_f + y[E(r_P) - r_f]$$
 $$\sigma_C^2 = y^2\sigma_P^2 + (1-y)^2\sigma_f^2 + 2y(1-y)\sigma_{Pf}$$
 
 By definition **σ_f = 0** and **σ_Pf = 0**, so:
-$$\sigma_C^2 = y^2\sigma_P^2 \quad\Rightarrow\quad \sigma_C = y\,\sigma_P$$
+$$\sigma_C^2 = y^2\sigma_P^2 \quad\Rightarrow\quad \sigma_C = y \sigma_P$$
 
 > **▶ Beyond the slides — why σ_f and σ_Pf are zero.** The risk-free return is a **constant**: a T-bill pays the same r_f in every scenario. A constant never deviates from its mean, so its variance is 0. Covariance multiplies the deviations of the two returns, and one of them is always 0, so the covariance with *any* asset is 0. (This is risk-free in **nominal** terms over the holding period; inflation risk is ignored.)
 
@@ -99,7 +99,7 @@ $$\sigma_C^2 = y^2\sigma_P^2 \quad\Rightarrow\quad \sigma_C = y\,\sigma_P$$
 ### Possible complete portfolios (slide 14)
 Combining E(r_C) and σ_C gives a straight line from F (the risk-free asset) through P:
 
-$$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S}\,\sigma_C$$
+$$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S} \sigma_C$$
 
 - **S** is the **Sharpe ratio**, or reward-to-variability ratio. In the example, S = 8/22 = **0.36**.
 - σ_P is the **quantity of risk** and E(r_P) − r_f = 8% is the **risk premium**.
@@ -131,14 +131,43 @@ so the CAL **bends (kinks) at P**: it is flatter in the levered region.
 
 ### Setting up the problem (slide 18)
 Plug E(r_C) and σ_C into the utility function U = E(r_C) − ½Aσ_C²:
-$$U_C = r_f + y[E(r_P) - r_f] - \tfrac12 A\,y^2\sigma_P^2$$
+$$U_C = r_f + y[E(r_P) - r_f] - \tfrac12 A y^2\sigma_P^2$$
 
 ### Finding the optimal y (slide 19)
 Set the derivative to zero (first-order condition):
-$$\frac{\partial U_C}{\partial y} = [E(r_P) - r_f] - A\,y\,\sigma_P^2 = 0$$
-$$\boxed{y^* = \frac{E(r_P) - r_f}{A\,\sigma_P^2}}$$
+$$\frac{\partial U_C}{\partial y} = [E(r_P) - r_f] - A y \sigma_P^2 = 0$$
+$$\boxed{y^* = \frac{E(r_P) - r_f}{A \sigma_P^2}}$$
 
 **Example (A = 4):** y* = (0.15 − 0.07) / [4 × (0.22)²] = 0.08 / 0.1936 = **41.32%**
+
+> **▶ Beyond the slides — the derivation step by step.**
+>
+> **Step 1. Substitute.** Start from U = E(r_C) − ½Aσ_C². Replace E(r_C) with r_f + y[E(r_P) − r_f], and σ_C² with (yσ_P)² = y²σ_P²:
+> U(y) = r_f + y[E(r_P) − r_f] − ½A·y²·σ_P²
+>
+> **Step 2. Spot the constants.** Only y is chosen by the investor. r_f, E(r_P), σ_P and A are fixed numbers. With the lecture's numbers:
+> U(y) = 0.07 + 0.08y − ½(4)(0.0484)y² = 0.07 + 0.08y − 0.0968y²
+> This is a quadratic in y with a negative y² term: an upside-down parabola, so it has one peak.
+>
+> **Step 3. Differentiate term by term** (d/dy of a constant is 0, of a·y is a, of b·y² is 2b·y):
+> - r_f → 0
+> - y[E(r_P) − r_f] → E(r_P) − r_f
+> - −½A·y²·σ_P² → −½A·σ_P²·2y = −A·y·σ_P²
+>
+> So dU/dy = [E(r_P) − r_f] − A·y·σ_P². Numerically: 0.08 − 0.1936y.
+>
+> **Step 4. Set it to zero and solve for y.**
+> [E(r_P) − r_f] − A·y·σ_P² = 0 → A·y·σ_P² = E(r_P) − r_f → **y\* = [E(r_P) − r_f] / (A·σ_P²)**
+> Numerically: 0.1936y = 0.08 → y\* = 0.08 / 0.1936 = **0.4132**.
+>
+> **Step 5. Check it is a maximum.** The second derivative is d²U/dy² = −A·σ_P² = −0.1936 < 0, so the curve bends down and y\* is the peak, not the bottom.
+>
+> **Step 6. Plug back in.**
+> - E(r_C\*) = 0.07 + 0.4132 × 0.08 = **10.31%**
+> - σ_C\* = 0.4132 × 0.22 = **9.09%**
+> - U(y\*) = 0.07 + 0.08(0.4132) − 0.0968(0.4132)² = 0.07 + 0.03306 − 0.01653 = **8.65%** (slide 20)
+>
+> **Intuition.** The extra return from one more unit of y is the risk premium, 8%. The extra risk penalty grows with y: A·y·σ_P². Raise y until the penalty from one more unit equals the gain. At y\* they are equal.
 
 ### Graphically (slides 20–21)
 - **Slide 20:** plot U against y. The curve is an upside-down parabola with its peak at **y* = 0.4132**, where **U(y*) = 8.65%**.
@@ -182,7 +211,7 @@ $$\boxed{y^* = \frac{E(r_P) - r_f}{A\,\sigma_P^2}}$$
 With weights w_D + w_E = 1:
 $$E(r_P) = w_D E(r_D) + w_E E(r_E)$$
 $$\sigma_P^2 = w_D^2\sigma_D^2 + w_E^2\sigma_E^2 + 2w_Dw_E\sigma_{DE}$$
-$$\sigma_P = \left[w_D^2\sigma_D^2 + w_E^2\sigma_E^2 + 2w_Dw_E\,\rho_{DE}\,\sigma_D\sigma_E\right]^{1/2}$$
+$$\sigma_P = \left[w_D^2\sigma_D^2 + w_E^2\sigma_E^2 + 2w_Dw_E \rho_{DE} \sigma_D\sigma_E\right]^{1/2}$$
 
 where σ_DE = ρ_DE σ_D σ_E is the covariance and ρ_DE the correlation.
 
