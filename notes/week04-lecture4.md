@@ -3,7 +3,7 @@
 
 *Investment Analysis and Portfolio Management · Instructor: Chao Ying (CUHK)*
 
-> **How to read these notes:** everything in the main text comes from the slides. Parts marked **▶ Beyond the slides** are my own explanations and worked examples. They follow the optional textbook (BKM Ch. 6–7) but were not explicitly presented in lecture.
+> **How to read these notes:** everything in the main text comes from the slides. Parts marked **▶ Beyond the slides** are my own explanations and worked examples. They follow the optional textbook (BKM Ch. 6–7) but were not explicitly presented in lecture. Charts are in `../charts/`.
 
 **Today's outline**
 1. Levels of the allocation decision
@@ -109,6 +109,8 @@ $$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S} \sigma_C$$
 | **Unlevered** | 0 ≤ y ≤ 1 | r_f ≤ E(r_C) ≤ E(r_P) | 0 ≤ σ_C ≤ σ_P |
 | **Levered** (buying on margin) | y > 1 | E(r_C) > E(r_P) | σ_C > σ_P |
 
+![The CAL](../charts/w4_cal.png)
+
 > **▶ Beyond the slides — points on the example CAL.**
 >
 > | y | E(r_C) | σ_C | What you do |
@@ -124,6 +126,8 @@ $$E(r_C) = r_f + \underbrace{\frac{E(r_P) - r_f}{\sigma_P}}_{S} \sigma_C$$
 Individuals usually borrow at **r_b > r_f**. To the right of P, the slope becomes
 $$S_b = \frac{E(r_P) - r_b}{\sigma_P} < S$$
 so the CAL **bends (kinks) at P**: it is flatter in the levered region.
+
+![Kinked CAL](../charts/w4_kinked_cal.png)
 
 ---
 
@@ -170,6 +174,11 @@ $$\boxed{y^* = \frac{E(r_P) - r_f}{A \sigma_P^2}}$$
 > **Intuition.** The extra return from one more unit of y is the risk premium, 8%. The extra risk penalty grows with y: A·y·σ_P². Raise y until the penalty from one more unit equals the gain. At y\* they are equal.
 
 ### Graphically (slides 20–21)
+
+![Utility vs y](../charts/w4_utility_y.png)
+
+![Optimal C*](../charts/w4_optimal_cstar.png)
+
 - **Slide 20:** plot U against y. The curve is an upside-down parabola with its peak at **y* = 0.4132**, where **U(y*) = 8.65%**.
 - **Slide 21:** on the CAL, the optimal portfolio **C\*** is where an indifference curve (A = 4) is **tangent** to the CAL.
   - E(r_C*) ≈ **10.3%** and σ_C* ≈ **9.1%**. (The slide shows 10.28% and 9.02%; using y* = 0.4132 exactly gives 7% + 0.4132 × 8% = 10.31% and 0.4132 × 22% = 9.09%. The difference is just rounding.)
@@ -240,6 +249,9 @@ Vary the weights from all stock to all bonds, for correlations ρ = 1, 0.3, 0 an
 - With ρ = 0.3, a mix like 80/20 (11%) is **less risky than the bond fund alone** (12%).
 
 ### Risk vs. weight in stocks (slide 29)
+
+![Risk vs weight](../charts/w4_sigma_vs_weight.png)
+
 Plotting σ_P against w_E (allowing short positions from −0.5 to 1.5) shows each curve's **minimum-variance** point:
 
 | ρ | w_E at minimum variance | Minimum σ_P |
@@ -258,12 +270,18 @@ Plotting σ_P against w_E (allowing short positions from −0.5 to 1.5) shows ea
 ## 6. The optimal risky portfolio (slides 31–33)
 
 ### The portfolio opportunity set (slide 31)
+
+![Opportunity sets](../charts/w4_opportunity_sets.png)
+
 Plot E(r_P) against σ_P for every mix of D and E. For each ρ you get a curve: the **portfolio opportunity set**, meaning all possible risky portfolios.
 - **ρ = 1:** a straight line from D to E.
 - **ρ < 1:** the curve bulges **to the left** (less risk for the same return). The lower ρ, the bigger the bulge.
 - **ρ = −1:** two straight lines that meet at σ = 0.
 
 ### Finding P\* (slide 32)
+
+![Tangent CAL](../charts/tangent_cal.png)
+
 Now add a risk-free asset with **r_f = 5%**. You can draw a CAL from F to **any** risky portfolio. The best one is the CAL with the **highest Sharpe ratio**: the line that is **tangent** to the opportunity set. The tangency point is the **optimal risky portfolio P\***.
 
 | Portfolio | E(r) | σ | Sharpe ratio |
@@ -303,6 +321,8 @@ On the graph (slide 35), C\* sits on CAL(P\*) where the A = 4 indifference curve
 | Bonds | 40% × 74.39% = **29.76%** |
 | Stocks | 60% × 74.39% = **44.63%** |
 | **Total** | **100%** |
+
+![Final allocation](../charts/w4_allocation.png)
 
 > **▶ Beyond the slides — the separation property.** Every investor, whatever their A, holds the **same risky portfolio P\***, because P\* depends only on the assets' returns, risks and correlations, not on preferences. Investors differ only in **y\***, i.e. how they split money between P\* and T-bills. A more risk-averse investor (higher A) holds less of P\*; a less risk-averse one holds more, possibly borrowing. For example, with A = 2: y\* = 0.06 / (2 × 0.02016) ≈ 1.49, so this investor borrows about 49% of their wealth and holds roughly 59.5% bonds and 89.3% stocks.
 
