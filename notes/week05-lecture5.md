@@ -211,6 +211,18 @@ where R_it = r_it − r_f and R_Mt = r_Mt − r_f. The **intercept** is α, the 
 
 > **▶ Beyond the slides — numeric example.** σ_iM = 0.024 and σ_M = 20% (σ_M² = 0.04), so β = 0.024 / 0.04 = **0.6**. Equivalently, β = ρ_iM × σ_i / σ_M. With ρ = 0.4 and σ_i = 30%: β = 0.4 × 0.30 / 0.20 = 0.6.
 
+> **▶ Beyond the slides — a real regression with the Homework 1 data.** Regress 0001.HK's monthly excess return on the HSI's (186 months, r_f = 0.308% per month):
+>
+> ![Beta regression](../charts/beta_regression.png)
+>
+> | Output | Value | Meaning |
+> |---|---|---|
+> | β (slope) | **0.85** | When the HSI moves 1%, 0001.HK moves about 0.85% on average: slightly defensive |
+> | α (intercept) | **0.01% per month** | Essentially zero: no abnormal return relative to the CAPM |
+> | R² | **0.50** | Half of 0001.HK's variance is market risk, half is firm-specific |
+>
+> Check the risk split: σ_i² = β²σ_M² + σ²(e) → 0.00506 = 0.00253 + 0.00253.
+
 ---
 
 ## 4. Multifactor models (slides 34–37)
