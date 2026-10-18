@@ -314,6 +314,8 @@ Only the part of the opportunity set **above the minimum-variance portfolio A** 
 
 On the graph (slide 35), C\* sits on CAL(P\*) where the A = 4 indifference curve touches it: E(r_C\*) = 5% + 0.7439 × 6% ≈ **9.46%** and σ_C\* = 0.7439 × 14.2% ≈ **10.56%**.
 
+![How C* is built, step by step](../charts/w4_cstar_steps.png)
+
 ### Final weights (slide 37)
 | Asset | Weight in the complete portfolio |
 |---|---|
