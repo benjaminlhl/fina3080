@@ -8,7 +8,7 @@
 > 3. Read the **traps** (Section 3). These are where marks usually get lost.
 > 4. Do the **practice problems** (Section 4) on paper with a calculator **before** opening the solutions.
 >
-> Lectures 1–4 were already tested on the midterm, so on the final they will most likely appear as **building blocks** inside bigger questions from later lectures. The most important carry-forward skills are the **two-asset portfolio math, Sharpe ratio, y\*, and the CAL**. They are the base for everything that follows (CAPM, index models, performance evaluation).
+> Lectures 1–5 were already tested on the midterm (Lecture 5 lists the midterm coverage as "Lecture 1 to 5"), so on the final Lectures 1–4 will most likely appear as **building blocks** inside bigger questions from later lectures. The most important carry-forward skills are the **two-asset portfolio math, Sharpe ratio, y\*, and the CAL**. They are the base for everything that follows (CAPM, index models, performance evaluation).
 
 ---
 
@@ -294,4 +294,4 @@ U = 0.066 − ½(5)(0.01125 × 0.64) = 0.066 − 0.018 = **4.8%** (> r_f = 3%).
 
 ## 6. Coming next
 
-Part 2 of the review will cover **Lecture 5 onward** (with more emphasis, since it hasn't been examined yet). Upload the remaining slides and the practice problems, and they'll be added here along with notes for each week.
+Part 2 (`final-review-L5-7.md`) covers **Lectures 5–7**: CAPM, APT, performance evaluation, funds and the EMH. Lectures 6–7 were not on the midterm, so they get the most emphasis.
